@@ -64,6 +64,7 @@ Cuma backup konfigurasi pribadi, gak ada script auto installer, jadi kalau mau p
 
 - niri
 - waybar
+- swaybg
 - gtklock
 - wofi
 - mako
