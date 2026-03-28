@@ -6,10 +6,12 @@ Konfigurasi niri sederhana bertema warna dan wallpaper Tifa.
 
 ### Desktop
 Tifa dan Aerith nyari tumpangan. Tentu saja cuma wallpaper yang bisa diganti.
+<br>
 ![Screenshot](screenshot/Screenshot%20from%202026-03-28%2004-43-39.png)
 
 ### Menu 1 - Aplikasi Launcher
-Menggunakan wofi
+Menggunakan wofi.
+<br>
 ![Screenshot](screenshot/menu1-wofi.png)
 
 ### Menu 2 - Umum
