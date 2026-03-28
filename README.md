@@ -14,15 +14,19 @@ Menggunakan wofi
 
 ### Menu 2 - Umum
 Karena kenyataannya windows manager gak ada standar shortcut umum, custom semua, jadi bisa saja lupa shortcutnya, apalagi kalau baru pertama kali coba pakai WM, atau sekian waktu gak buka Komputer, makanya dibuat menu ini, memang sih niri ada show up shortcut pas awal di buka, tapi saat itu ke tutup belum ke hapal semua kadang bingung mau pencet apa buat nampilin itu lagi, ya namanya belum ke hapal/ kebaca semua, dan saya kena istilah `SKILL ISSUE` di banyak hal. Jadi intinya biar bagian topbar bisa beroperasi hanya dengan klik mirip DE.
+<br>
 ![Screenshot](screenshot/menu2-custom.png)
 
 ### Menu 3 - System Poweroff/Shutdown
-untuk Shutdown, Restart, dll
+untuk Shutdown, Restart, dll.
+<br>
 ![Screenshot](screenshot/menu3-custom.png)
 
 ### Jam Sunda
 Cuma gimik nama istilah jam dalam bahasa Sunda untuk tiap jamnya, yang di Sundanya sendiri mulai jarang digunakan. Beda daerah Sunda bisa beda varian referensi.
+<br>
 Link [JamSunda](https://github.com/tawakaltakwa/JamSunda), btw yang jam_sunda2.sh (versi referensi 2) ada sedikit error script tampilan yang tak kunjung saya dibenerin sampai sekarang. Jadi gunakan yang jam_sunda.sh saja atau benerin sendiri.
+<br>
 ![Screenshot](screenshot/jam-sunda.png)
 
 ## Shortcut
@@ -77,5 +81,6 @@ Cuma backup konfigurasi pribadi, gak ada script auto installer, jadi kalau mau p
 
 ## Catatan
 
-open terminal nemo defaultnya gnome-terminal, untuk gantinya bisa di setting pake deconf-editor
+open terminal nemo defaultnya gnome-terminal, untuk gantinya bisa di setting pake deconf-editor.
+<br>
 ![Screenshot](screenshot/nemo-terminal.png)
