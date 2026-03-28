@@ -1,0 +1,293 @@
+{
+    // "layer": "top", // Waybar at top layer
+    // "position": "top", // Waybar position (top|bottom|left|right)
+    "height": 30, // Waybar height (to be removed for auto height)
+    "margin-bottom": 1,
+    // "width": 1280, // Waybar width
+    "spacing": 0, // Gaps between modules (4px)
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/launcher",
+        "custom/menucommand",
+        "custom/spasi",
+        "ext/workspaces",
+        "custom/spasi",
+        "wlr/taskbar"
+    ],
+    "modules-center": [],
+    "modules-right": [
+        "custom/jamsunda",
+        "pulseaudio",
+        "tray",
+        "custom/spasi",
+        "custom/power"
+    ],
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": "{name} {icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        }
+    },
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "sort-by-app-id": true,
+        //        "icon-size": 14,
+        //        "icon-theme": "Numix-Circle",
+        "tooltip-format": "{app_id}-{title}",
+        "on-click": "activate",
+        "on-click-middle": "close"
+    },
+    "niri/workspaces": {
+        "format": "{icon} {index}",
+        "current-only": false,
+        "all-outputs": true,
+        "expand": true,
+        "format-icons": {
+            // Named workspaces
+            // (you need to configure them in niri)
+            //		    "browser": "",
+            //	    "discord": "",
+            //    "chat": "<b></b>",
+            // Icons by state
+            "active": "",
+            "default": ""
+        }
+    },
+    "ext/workspaces": {
+        "format": " {id} ",
+        "on-click": "activate",
+        "active-only": true,
+        "format-icons": {
+            //"Workspace 1": "",
+            //"Workspace 2": "",
+            //"Workspace 3": "",
+            //"Workspace 4": "",
+            "active": "",
+            "default": ""
+        },
+        "sort-by-id": true
+    },
+    "mpd": {
+        "format": "{stateIcon} {consumeIcon}{randomIcon}{repeatIcon}{singleIcon}{artist} - {album} - {title} ({elapsedTime:%M:%S}/{totalTime:%M:%S}) ⸨{songPosition}|{queueLength}⸩ {volume}% ",
+        "format-disconnected": "Disconnected ",
+        "format-stopped": "{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}Stopped ",
+        "unknown-tag": "N/A",
+        "interval": 2,
+        "consume-icons": {
+            "on": " "
+        },
+        "random-icons": {
+            "off": "<span color=\"#f53c3c\"></span> ",
+            "on": " "
+        },
+        "repeat-icons": {
+            "on": " "
+        },
+        "single-icons": {
+            "on": "1 "
+        },
+        "state-icons": {
+            "paused": "",
+            "playing": ""
+        },
+        "tooltip-format": "MPD (connected)",
+        "tooltip-format-disconnected": "MPD (disconnected)"
+    },
+    "idle_inhibitor": {
+        "format": "{icon}",
+        "format-icons": {
+            "activated": "",
+            "deactivated": ""
+        }
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 2
+    },
+    "clock": {
+        //        "format": "{:%I:%M %p}",
+        "format": "{:%d %B %Y}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        //        "format-alt": "{:%A, %d %B %Y}",
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "temperature": {
+        // "thermal-zone": 2,
+        // "hwmon-path": "/sys/class/hwmon/hwmon2/temp1_input",
+        "critical-threshold": 80,
+        // "format-critical": "{temperatureC}°C {icon}",
+        "format": "{temperatureC}°C {icon}",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ]
+    },
+    "backlight": {
+        // "device": "acpi_video1",
+        "format": "{percent}% {icon}",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery": {
+        "states": {
+            // "good": 95,
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% {icon}",
+        "format-charging": "{capacity}% ",
+        "format-plugged": "{capacity}% ",
+        "format-alt": "{time} {icon}",
+        // "format-good": "", // An empty format will hide the module
+        // "format-full": "",
+        "format-icons": [
+            "",
+            "",
+            "",
+            "",
+            ""
+        ]
+    },
+    "battery#bat2": {
+        "bat": "BAT2"
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "{essid} ({signalStrength}%) ",
+        "format-ethernet": "{ipaddr}/{cidr} ",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio/slider": {
+        "tooltip-format": "Audio Volume",
+        "min": 0,
+        "max": 100,
+        "orientation": "horizontal"
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        // "format": "{volume}% {icon} {format_source}",
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}  {format_source}",
+        "format-bluetooth-muted": " {icon}  {format_source}",
+        //"format-muted": " {format_source} ",
+        "format-muted": "  {format_source}",
+        "format-source": "{volume}%  ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": " ",
+            "hands-free": " ",
+            "headset": " ",
+            "phone": " ",
+            "portable": " ",
+            "car": " ",
+            "default": [
+                " ",
+                " ",
+                " "
+            ]
+        },
+        "on-click": "pavucontrol -t 1",
+        "on-click-right": "pamixer -t",
+    },
+    "wireplumber": {
+        "format": "{volume}%",
+        "format-muted": "",
+        "on-click": "helvum"
+    },
+    "custom/media": {
+        "format": "{icon} {}",
+        "return-type": "json",
+        "max-length": 40,
+        "format-icons": {
+            "spotify": "",
+            "default": "🎜"
+        },
+        "escape": true,
+        "exec": "$HOME/.config/waybar/mediaplayer.py 2> /dev/null" // Script in resources folder
+        // "exec": "$HOME/.config/waybar/mediaplayer.py --player spotify 2> /dev/null" // Filter player based on name
+    },
+    "custom/power": {
+        "format": "",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/niri/waybar/power_menu.xml",
+        "menu-actions": {
+            "shutdown": "poweroff",
+            "reboot": "reboot",
+            "logout": "niri msg action quit",
+            "lock": "gtklock -s ~/.config/niri/gtklock/style.css"
+        }
+    },
+    "custom/menucommand": {
+        "format": "",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "$HOME/.config/niri/waybar/comm_menu.xml",
+        "menu-actions": {
+            "ckey": "niri msg action show-hotkey-overlay",
+            "crun": "wmenu-run -N 000000 -n ffffff -S ff0000 -s 000000",
+            "cterm": "alacritty",
+            "cbrowser": "firefox"
+        }
+    },
+    "custom/terminal": {
+        "format": " Terminal",
+        "on-click": "alacritty",
+        "tooltip-format": "Terminal Launcher",
+    },
+    "custom/run": {
+        "format": " Run",
+        "on-click": "wmenu-run -N 000000 -n ffffff -S ff0000 -s 000000",
+        "tooltip-format": "wmenu",
+    },
+    "custom/launcher": {
+        "format": "",
+        "on-click": "wofi -s /home/kal/.config/niri/wofi/styles.css --show drun -I -G -W 40% -l 1",
+        "tooltip": false
+    },
+    "custom/browser": {
+        "format": " Firefox",
+        "on-click": "firefox",
+        "tooltip-format": "Browser",
+    },
+    "custom/spasi": {
+        "format": "   ",
+        "tooltip": false
+    },
+    "custom/nirishortcut": {
+        "format": "Lupa shortcut?",
+        "tooltip": false,
+        "on-click": "niri msg action show-hotkey-overlay"
+    },
+    "custom/jamsunda": {
+        "format": "{text}",
+        "tooltip": true,
+        "tooltip-format": "Jam Sunda",
+        //        "return-type": "json",
+        "interval": 60,
+        "exec": "bash ~/.config/waybar/jamsunda.sh -p -t -f 12",
+        "on-click": "bash ~/.config/waybar/jamsunda_info.sh"
+    }
+}
