@@ -27,7 +27,7 @@ untuk Shutdown, Restart, dll.
 ### Jam Sunda
 Cuma gimik nama istilah jam dalam bahasa Sunda untuk tiap jamnya, yang di Sundanya sendiri mulai jarang digunakan. Beda daerah Sunda bisa beda varian referensi.
 <br>
-Link [JamSunda](https://github.com/tawakaltakwa/JamSunda), btw yang jam_sunda2.sh (versi referensi 2) ada sedikit error script tampilan yang tak kunjung saya dibenerin sampai sekarang. Jadi gunakan yang jam_sunda.sh saja atau benerin sendiri.
+Link [JamSunda](https://github.com/tawakaltakwa/JamSunda), btw yang jamsunda2.sh (versi referensi 2) ada sedikit error script tampilan yang tak kunjung saya dibenerin sampai sekarang. Jadi gunakan yang jamsunda.sh saja atau benerin sendiri.
 <br>
 ![Screenshot](screenshot/jam-sunda.png)
 
