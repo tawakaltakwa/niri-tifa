@@ -1,4 +1,3 @@
-// Niri configuration for CachyOS
 // For documentation and full reference, see: https://github.com/YaLTeR/niri/wiki
 
 // ────────────── Input Configuration ──────────────
@@ -7,18 +6,18 @@
 input {
     keyboard {
         xkb {
-            layout "us" // Use the German keyboard layout
+            layout "us"
         }
-        numlock // Enable numlock on startup
+        numlock
     }
 
     touchpad {
-        tap // Enable tap-to-click
-        natural-scroll // Enable natural (macOS-style) scrolling
+        tap
+        natural-scroll
     }
 
-    focus-follows-mouse // Automatically focus windows under the mouse pointer
-    workspace-auto-back-and-forth // Enable workspace back & forth switching
+    focus-follows-mouse
+    workspace-auto-back-and-forth
 }
 
 // ────────────── Output Configuration ──────────────
@@ -27,27 +26,27 @@ input {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Outputs
 
 /- output "DP-1" {
-    mode "2560x1440@359.979" // Set resolution and refresh rate
-    scale 1 // No scaling (use 2 for HiDPI)
+    mode "2560x1440@359.979"
+    scale 1
 }
 
 // ────────────── Keybindings ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Key-Bindings
 
 binds {
-    MOD+SHIFT+ESCAPE                     { show-hotkey-overlay; }
+    MOD+SHIFT+ESCAPE                    { show-hotkey-overlay; }
 
     // ─── Applications ───
     MOD+RETURN                          hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
     ALT+T                               hotkey-overlay-title="Open Terminal: alacritty" { spawn-sh "alacritty"; }
     ALT+SPACE                           hotkey-overlay-title="Open App Launcher: wofi" { spawn-sh "wofi -s /home/kal/.config/niri/wofi/styles.css --show drun -I -G -W 40%"; }
     ALT+B                               hotkey-overlay-title="Open Browser: firefox" { spawn-sh "firefox"; }
-    ALT+L                           hotkey-overlay-title="Lock Screen: gtklock" { spawn-sh "gtklock -s ~/.config/niri/gtklock/style.css"; }
+    ALT+L                               hotkey-overlay-title="Lock Screen: gtklock" { spawn-sh "gtklock -s ~/.config/niri/gtklock/style.css"; }
     ALT+R                               hotkey-overlay-title="Command Runner: wmenu" { spawn-sh "wmenu-run -N 000000 -n ffffff -S ff0000 -s 000000 -b"; }
-    ALT+ESCAPE { spawn "resources"; }
+    ALT+ESCAPE                          { spawn "resources"; }
     
     // Please choose your own file manager
-    ALT+E               	        hotkey-overlay-title="File Manager: Nemo" { spawn-sh "nemo"; }
+    ALT+E               	            hotkey-overlay-title="File Manager: Nemo" { spawn-sh "nemo"; }
 
     // ─── Audio Controls ───
     // Example volume keys mappings for PipeWire & WirePlumber.
@@ -114,8 +113,8 @@ binds {
     MOD+CTRL+SHIFT+WHEELSCROLLDOWN      { move-column-right; }
     MOD+CTRL+SHIFT+WHEELSCROLLUP        { move-column-left; }
     
-    Mod+Page_Down      { focus-workspace-down; }
-    Mod+Page_Up        { focus-workspace-up; }
+    Mod+Page_Down                       { focus-workspace-down; }
+    Mod+Page_Up                         { focus-workspace-up; }
     
     MOD+1                               { focus-workspace 1; }
     MOD+2                               { focus-workspace 2; }
@@ -173,12 +172,8 @@ binds {
 // ────────────── Startup Applications ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
-//    spawn-sh-at-startup "/usr/lib/polkit-kde-authentication-agent-1 &" // Polkit
     spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-//    spawn-sh-at-startup "swww-daemon" // Wallpaper daemon
-//    spawn-sh-at-startup "swww img /home/kal/SagalaAya/config/wm-niri/merah/wallpaper/red_eyes_black_dragon_by_nhociory_df08crc.jpg" // Set wallpaper
     spawn-sh-at-startup "swaybg -i ~/.config/niri/wallpaper/wd_upscayl_2x_digital-art-4x.png"
-//    spawn-at-startup "waybar"
     spawn-sh-at-startup "waybar -c ~/.config/niri/waybar/config.jsonc -s ~/.config/niri/waybar/style.css"
     spawn-at-startup "nm-applet"
     spawn-at-startup "xwayland-satellite"
@@ -204,20 +199,13 @@ binds {
 
         focus-ring {
             off
-            //width 3
-            //active-color "#00ac89"
-            //inactive-color "#505050"
         }
         
         border {
-            //off
             width 3
             active-color "#fd0a02"
             inactive-color "#bb0a02"
             urgent-color "#ff0000"
-
-        // active-gradient from="#22ddff" to="#00dd00" angle=145 relative-to="workspace-view"
-        // inactive-gradient from="#888888" to="#808080" angle=45 relative-to="workspace-view"
         }
 
         shadow {
@@ -279,61 +267,22 @@ binds {
     }
     
     window-rule {
-	    match app-id="firefox*"
-	    open-maximized true
-	}
+        match app-id="firefox*"
+        match app-id="org.gnome.Nautilus"
+        match title="Inkscape"
+        match app-id="gimp"
+        match app-id="steam"
+        match app-id="Waydroid"
+        match app-id="jetbrains-studio"
+        match app-id="antigravity"
+        open-maximized true
+    }
 
-	window-rule {
-	    match app-id="org.gnome.Nautilus"
-	    open-maximized true
-	}
-
-	window-rule {
-	    match title="Inkscape"
-	    open-maximized true
-	}
-
-	window-rule {
-	    match app-id="gimp"
-	    open-maximized true
-	}
-
-	window-rule {
-	    match app-id="steam"
-	    open-maximized true
-	}
-
-//	window-rule {
-//	    match app-id="nemo"
-//	    open-maximized true
-//	}
-
-	window-rule {
-	    match app-id="Waydroid"
-	    open-maximized true
-	}
-	
-	window-rule {
-	    match app-id="jetbrains-studio"
-	    open-maximized true
-	}
-
-	window-rule {
-	    match app-id="vlc"
-	//    open-maximized true
-	    open-fullscreen true
-	    open-focused true
-	}
-	
-//	window-rule {
-//	    match app-id="nz.co.mega*"
-//	    open-floating true
-//	}
-
-window-rule {
-	    match app-id="antigravity"
-	    open-maximized true
-	}
+    window-rule {
+        match app-id="vlc"
+        open-fullscreen true
+        open-focused true
+    }
 
 // ────────────── Environment Variables ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#environment
@@ -353,7 +302,5 @@ window-rule {
     
     cursor {
         xcursor-theme "capitaine-cursors-light"
-//        xcursor-size 48
         hide-when-typing
-//        hide-after-inactive-ms 1000
     }
