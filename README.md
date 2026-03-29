@@ -53,12 +53,20 @@ Untuk launch aplikasi dipisah pake ALT. kebanyakan control umum masih default ni
 | MOD+BACKSPACE | Tutup window (juga) |
 
 nemu duplikat shortcut? Emang duplikat, pernah nyoba beberapa WM, pernah membiasakan diri ngikutin shortcut default tutup window pake MOD+Q dan pernah juga membiasakan diri dengan MOD+Backspace, jadi ya biar kondisional refrek jari kebiasaan lamanya ke yang mana pun tetap operasional. Lagipula gak bikin eror system, jadi boleh kan...
-
+<br>
+<br>
 Folder hasil screenshot di ~/Pictures/Screenshots
 
 ## Instalasi / Konfigurasi
 
-gak ada script auto installer, jadi kalau mau pakai ya copy paste saja isi folder niri-tifa ke `~/.config/`. Kemudian install aplikasi di bawah.
+Gak ada script auto installer, jadi kalau mau pakai ya copy paste saja folder dan isinya ke `~/.config/`.
+<br>
+<br>
+3 folder ini yang perlu di copy paste:<br>
+![Screenshot](screenshot/3folder.png)
+<br>
+<br>
+Kemudian install aplikasi di bawah.
 
 ## Aplikasi yang digunakan
 
