@@ -7,20 +7,15 @@
     "spacing": 0, // Gaps between modules (4px)
     // Choose the order of the modules
     "modules-left": [
-        "custom/launcher",
-        "custom/menucommand",
+        "group/grkiri",
         "custom/spasi",
-        "ext/workspaces",
-        "custom/spasi",
-        "wlr/taskbar"
+        "group/grtaskbar"
     ],
     "modules-center": [],
     "modules-right": [
         "custom/jamsunda",
-        "pulseaudio",
-        "tray",
         "custom/spasi",
-        "custom/power"
+        "group/grkanan"
     ],
     "keyboard-state": {
         "numlock": true,
@@ -191,7 +186,6 @@
         "format": "{volume}% {icon}",
         "format-bluetooth": "{volume}% {icon}  {format_source}",
         "format-bluetooth-muted": " {icon}  {format_source}",
-        //"format-muted": " {format_source} ",
         "format-muted": "  {format_source}",
         "format-source": "{volume}%  ",
         "format-source-muted": "",
@@ -209,12 +203,17 @@
             ]
         },
         "on-click": "pavucontrol -t 1",
-        "on-click-right": "pamixer -t",
+        "on-click-right": "pamixer -t"
     },
     "wireplumber": {
         "format": "{volume}%",
         "format-muted": "",
         "on-click": "helvum"
+    },
+    "cffi/niri-taskbar": {
+        "module_path": "/usr/lib/waybar/libniri_taskbar.so",
+        "show_all_outputs": true,
+        "icon-size": 16
     },
     "custom/media": {
         "format": "{icon} {}",
@@ -255,12 +254,12 @@
     "custom/terminal": {
         "format": " Terminal",
         "on-click": "alacritty",
-        "tooltip-format": "Terminal Launcher",
+        "tooltip-format": "Terminal Launcher"
     },
     "custom/run": {
         "format": " Run",
         "on-click": "wmenu-run -N 000000 -n ffffff -S ff0000 -s 000000",
-        "tooltip-format": "wmenu",
+        "tooltip-format": "wmenu"
     },
     "custom/launcher": {
         "format": "",
@@ -270,7 +269,7 @@
     "custom/browser": {
         "format": " Firefox",
         "on-click": "firefox",
-        "tooltip-format": "Browser",
+        "tooltip-format": "Browser"
     },
     "custom/spasi": {
         "format": "   ",
@@ -285,9 +284,34 @@
         "format": "{text}",
         "tooltip": true,
         "tooltip-format": "Jam Sunda",
-        //        "return-type": "json",
         "interval": 60,
         "exec": "bash ~/.config/waybar/jamsunda.sh -p -t -f 12",
         "on-click": "bash ~/.config/waybar/jamsunda_info.sh"
+    },
+    "group/grkanan": {
+        "orientation": "horizontal",
+        // "drawer": {
+        //     "transition-duration": 500,
+        //     //"transition-left-to-right": false
+        // },
+        "modules": [
+            "tray",
+            "pulseaudio",
+            "custom/power"
+        ]
+    },
+    "group/grtaskbar": {
+        "orientation": "horizontal",
+        "modules": [
+            "ext/workspaces",
+            "cffi/niri-taskbar"
+        ]
+    },
+    "group/grkiri": {
+        "orientation": "horizontal",
+        "modules": [
+            "custom/launcher",
+            "custom/menucommand"
+        ]
     }
 }

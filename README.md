@@ -1,13 +1,13 @@
 # Niri Tifa
 
-Konfigurasi niri sederhana bertema warna dan wallpaper Tifa.
+Konfigurasi niri sederhana bertema warna dan wallpaper Tifa. Semua konfigurasi berdasarkan kebutuhan dan kebiasaan personal, kalau ada yang nyasak ke sini dan mau pake juga silahkan, edit saja sendiri bagian yang kurang sesuai dengan kebutuhan kalian.
 
 ## Screenshot
 
 ### Desktop
 Tifa dan Aerith nyari tumpangan. Tentu saja cuma wallpaper yang bisa diganti.
 <br>
-![Screenshot](screenshot/Screenshot%20from%202026-03-28%2004-43-39.png)
+![Screenshot](screenshot/Screenshot1.png)
 
 ### Menu 1 - Aplikasi Launcher
 Menggunakan wofi.
@@ -52,18 +52,19 @@ Untuk launch aplikasi dipisah pake ALT. kebanyakan control umum masih default ni
 | MOD+Q | Tutup window |
 | MOD+BACKSPACE | Tutup window (juga) |
 
-nemu duplikat shortcut? Emang duplikat, pernah nyoba macam-macam WM, pernah membiasakan diri ngikutin shortcut default tutup window pake MOD+Q dan pernah juga membiasakan diri dengan MOD+Backspace, jadi yang biar kondisional refrek jarinya ke yang mana tetap operasional. Lagipula gak bikin eror system, jadi boleh kan...
+nemu duplikat shortcut? Emang duplikat, pernah nyoba beberapa WM, pernah membiasakan diri ngikutin shortcut default tutup window pake MOD+Q dan pernah juga membiasakan diri dengan MOD+Backspace, jadi ya biar kondisional refrek jari kebiasaan lamanya ke yang mana pun tetap operasional. Lagipula gak bikin eror system, jadi boleh kan...
 
 Folder hasil screenshot di ~/Pictures/Screenshots
 
 ## Instalasi / Konfigurasi
 
-Cuma backup konfigurasi pribadi, gak ada script auto installer, jadi kalau mau pakai ya copy paste saja isi folder niri-tifa ke ~/.config/
+gak ada script auto installer, jadi kalau mau pakai ya copy paste saja isi folder niri-tifa ke `~/.config/`. Kemudian install aplikasi di bawah.
 
 ## Aplikasi yang digunakan
 
 - niri
 - waybar
+- waybar-niri-taskbar
 - swaybg
 - gtklock
 - wofi

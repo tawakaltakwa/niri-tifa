@@ -173,8 +173,8 @@ binds {
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#spawn-sh-at-startup
 
     spawn-at-startup "/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1"
-    spawn-sh-at-startup "swaybg -i ~/.config/niri/wallpaper/wd_upscayl_2x_digital-art-4x.png"
     spawn-sh-at-startup "waybar -c ~/.config/niri/waybar/config.jsonc -s ~/.config/niri/waybar/style.css"
+    spawn-sh-at-startup "swaybg -i ~/.config/niri/wallpaper/wd_upscayl_2x_digital-art-4x.png"
     spawn-at-startup "nm-applet"
     spawn-at-startup "xwayland-satellite"
     spawn-sh-at-startup "mako -c ~/.config/niri/mako/config"
@@ -186,121 +186,121 @@ binds {
 // ────────────── Layout Settings ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Layout
 
-    layout {
-        gaps 0 // Gap between windows
-        center-focused-column "never" // Don’t auto-center focused column
-        always-center-single-column
-
-        preset-column-widths {
-            proportion 0.33333
-            proportion 0.5
-            proportion 0.66667
-        }
-
-        focus-ring {
-            off
-        }
-        
-        border {
-            width 3
-            active-color "#fd0a02"
-            inactive-color "#bb0a02"
-            urgent-color "#ff0000"
-        }
-
-        shadow {
-            softness 30
-            spread 5
-            offset x=0 y=5
-            color "#0007"
-        }
-
-        struts {}
-    }
-
 // ────────────── Animation Settings ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Animations
-    animations {
-        workspace-switch {
-            spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
-        }
-        window-open {
-            duration-ms 200
-            curve "ease-out-quad"
-        }
-        window-close {
-            duration-ms 200
-            curve "ease-out-cubic"
-        }
-        horizontal-view-movement {
-            spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
-        }
-        window-movement {
-            spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
-        }
-        window-resize {
-            spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
-        }
-        config-notification-open-close {
-            spring damping-ratio=0.6 stiffness=1200 epsilon=0.001
-        }
-        screenshot-ui-open {
-            duration-ms 300
-            curve "ease-out-quad"
-        }
-        overview-open-close {
-            spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
-        }
+animations {
+    workspace-switch {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
     }
+    window-open {
+        duration-ms 200
+        curve "ease-out-quad"
+    }
+    window-close {
+        duration-ms 200
+        curve "ease-out-cubic"
+    }
+    horizontal-view-movement {
+        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+    }
+    window-movement {
+        spring damping-ratio=1.0 stiffness=800 epsilon=0.0001
+    }
+    window-resize {
+        spring damping-ratio=1.0 stiffness=1000 epsilon=0.0001
+    }
+    config-notification-open-close {
+        spring damping-ratio=0.6 stiffness=1200 epsilon=0.001
+    }
+    screenshot-ui-open {
+        duration-ms 300
+        curve "ease-out-quad"
+    }
+    overview-open-close {
+        spring damping-ratio=1.0 stiffness=900 epsilon=0.0001
+    }
+}
 
 // ────────────── Window Rules ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Window-Rules
 
-    window-rule {
-        match app-id=r#"firefox$"# title="^Picture-in-Picture$"
-        open-floating true // Always float Firefox PiP windows
-    }
+window-rule {
+    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    open-floating true // Always float Firefox PiP windows
+}
 
-    window-rule {
-        geometry-corner-radius 15 // Set every window radius to 20
-        clip-to-geometry true
-    }
-    
-    window-rule {
-        match app-id="firefox*"
-        match app-id="org.gnome.Nautilus"
-        match title="Inkscape"
-        match app-id="gimp"
-        match app-id="steam"
-        match app-id="Waydroid"
-        match app-id="jetbrains-studio"
-        match app-id="antigravity"
-        open-maximized true
-    }
+window-rule {
+    geometry-corner-radius 15 // Set every window radius to 20
+    clip-to-geometry true
+}
 
-    window-rule {
-        match app-id="vlc"
-        open-fullscreen true
-        open-focused true
-    }
+window-rule {
+    match app-id="firefox*"
+    match app-id="org.gnome.Nautilus"
+    match title="Inkscape"
+    match app-id="gimp"
+    match app-id="steam"
+    match app-id="Waydroid"
+    match app-id="jetbrains-studio"
+    match app-id="antigravity"
+    open-maximized true
+}
+
+window-rule {
+    match app-id="vlc"
+    open-fullscreen true
+    open-focused true
+}
 
 // ────────────── Environment Variables ──────────────
 // https://github.com/YaLTeR/niri/wiki/Configuration:-Miscellaneous#environment
 
-    environment {
-        DISPLAY ":1"
-        ELECTRON_OZONE_PLATFORM_HINT "auto"
-        QT_QPA_PLATFORM "wayland"
-        QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
-        XDG_SESSION_TYPE "wayland"
-        XDG_CURRENT_DESKTOP "niri"
+environment {
+    DISPLAY ":1"
+    ELECTRON_OZONE_PLATFORM_HINT "auto"
+    QT_QPA_PLATFORM "wayland"
+    QT_WAYLAND_DISABLE_WINDOWDECORATION "1"
+    XDG_SESSION_TYPE "wayland"
+    XDG_CURRENT_DESKTOP "niri"
+}
+
+hotkey-overlay {
+    skip-at-startup
+}
+
+cursor {
+    xcursor-theme "capitaine-cursors-light"
+    hide-when-typing
+}
+
+layout {
+    gaps 0 // Gap between windows
+    center-focused-column "never" // Don’t auto-center focused column
+    always-center-single-column
+
+    preset-column-widths {
+        proportion 0.33333
+        proportion 0.5
+        proportion 0.66667
     }
 
-    hotkey-overlay {
-        skip-at-startup
+    focus-ring {
+        off
     }
     
-    cursor {
-        xcursor-theme "capitaine-cursors-light"
-        hide-when-typing
+    border {
+        width 3
+        active-color "#ff0000"
+        inactive-color "#bb0000"
+        urgent-color "#ff0000"
     }
+
+    shadow {
+        softness 30
+        spread 5
+        offset x=0 y=5
+        color "#0007"
+    }
+
+    struts {}
+}
