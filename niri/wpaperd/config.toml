@@ -1,0 +1,7 @@
+[default]
+duration = "5m"
+mode = "fit"
+sorting = "random"
+path = "/home/kal/.config/niri/wallpaper"
+
+[default.transition.dreamy-zoom]

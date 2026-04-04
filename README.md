@@ -5,9 +5,20 @@ Konfigurasi niri sederhana bertema warna dan wallpaper Tifa. Semua konfigurasi b
 ## Screenshot
 
 ### Desktop
-Tifa dan Aerith nyari tumpangan. Tentu saja cuma wallpaper yang bisa diganti.
+Dengan wallpaper 1
 <br>
 ![Screenshot](screenshot/Screenshot1.png)
+<br>
+<br>
+Dengan wallpaper 2
+<br>
+![Screenshot](screenshot/Screenshot2.png)
+<br>
+<br>
+Dengan wallpaper 3
+<br>
+![Screenshot](screenshot/Screenshot3.png)
+<br>
 
 ### Menu 1 - Aplikasi Launcher
 Menggunakan wofi.
@@ -66,6 +77,15 @@ Gak ada script auto installer, jadi kalau mau pakai ya copy paste saja folder da
 ![Screenshot](screenshot/3folder.png)
 <br>
 <br>
+Edit file `niri/wpaperd/config.toml`, lihat bagian `path="..."`, yang tersimpan disini memuat nama direktori yang berdasarkan username yang sudah pasti berbeda dengan username kalian, jadi sesuaikan sendiri dengan lokasi wallpapermu.
+<br>
+<br>
+Edit dile `niri/gtklock/style.css`, kasusnya sama seperti wpaperd, di bagian `window {
+    background-image: url("...")
+     ...
+}` ada nama direktori yang harus disesuaikan.
+<br>
+<br>
 Kemudian install aplikasi di bawah.
 
 ## Aplikasi yang digunakan
@@ -73,7 +93,7 @@ Kemudian install aplikasi di bawah.
 - niri
 - waybar
 - waybar-niri-taskbar
-- swaybg
+- wpaperd
 - gtklock
 - wofi
 - mako
